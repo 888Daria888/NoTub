@@ -1,0 +1,94 @@
+.footer {
+ margin-top: 91px;
+   &__wrapper {
+   }
+
+   &__container {
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__footer-download {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__footer-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 150px;
+      font-family: 'Avenir';
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 85px;
+   }
+}
+
+.footer-download {
+
+   &_title {
+      font-family: 'Noto Sans';
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 33px;
+      letter-spacing: 0.03em;
+   }
+
+   &__footer-link {
+      margin-top: 32px;
+      display: flex;
+      button:first-child{
+         margin-right: 27px;
+      }
+   }
+}
+
+.footer-navigation {
+
+   &__footer-left {
+      position: relative;
+      z-index: 18;
+   }
+
+   &__footer-right {
+      p:first-child{
+         margin-bottom: 25px;
+      }
+   }
+}
+.footer-left {
+   &_circle{
+      position: absolute;
+      z-index: 0;
+      bottom: -300px;
+      left: -350px;
+   }
+
+   &_logo {
+      position: relative;
+      z-index: 19;
+   }
+
+   &_contact {
+      position: relative;
+      margin-top: 7px;
+      font-weight: 500;
+      width: 171px;
+      z-index: 20;
+   }
+   &_contact-bold {
+      font-weight: 800;
+   }
+
+   &_copyright {
+      position: relative;
+      margin-top: 25px;
+      z-index: 21;
+   }
+}
+
