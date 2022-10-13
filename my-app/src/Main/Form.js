@@ -10,7 +10,14 @@ function Form() {
    const [emails, setEmails] = useState('');
    const [subject, setSubject] = useState('');
    const [message, setMessage] = useState('');
-
+   const [isColor, setIsColor] = useState({});
+   // let isColor = new Object();
+   // Object.defineProperties(isColor, {
+   //    border: {
+   //       value: 'none',
+   //       writable: true,
+   //    },
+   // });
    const onSubmit = (e) => {
       e.preventDefault();
    }
@@ -37,13 +44,10 @@ function Form() {
    const onMessageChange = (e) => {
       setMessage(e.target.value)
    }
-   const onClickButton = (e) => {
+
+   const onClickButton = () => {
       if ((names || venueName || venueCity || stateCity || emails || subject || message) == '') {
-         const styleInput = document.querySelectorAll('.form-input');
-         for (let i = 0; i < styleInput.length; i++) {
-            styleInput.style.color = 'green';
-         }
-         console.log(styleInput);
+         setIsColor({border: '2px solid #FF0000'});
       }
 
    }
@@ -58,15 +62,15 @@ function Form() {
                </div>
                <div className='form__form-block'>
                   <form onSubmit={onSubmit}>
-                     <input onChange={onNameChange} className='form-block_name form-input' type='text' placeholder='Name' />
-                     <input onChange={onVenueNameChange} className='form-block_venue-name form-input' type='text' placeholder='Venue Name' />
+                     <input onChange={onNameChange} style={isColor} className='form-block_name form-input' type='text' placeholder='Name' />
+                     <input onChange={onVenueNameChange} style={isColor} className='form-block_venue-name form-input' type='text' placeholder='Venue Name' />
                      <div className='form-block__block'>
-                        <input onChange={onVenueCityChange} className='form-block_venue-city form-input-mini' type='text' placeholder='Venue City' />
-                        <input onChange={onStateCityChange} className='form-block_state-city form-input-mini' type='text' placeholder='State City' />
+                        <input onChange={onVenueCityChange} style={isColor} className='form-block_venue-city form-input-mini' type='text' placeholder='Venue City' />
+                        <input onChange={onStateCityChange} style={isColor} className='form-block_state-city form-input-mini' type='text' placeholder='State City' />
                      </div>
-                     <input onChange={onEmailChange} className='form-block_email form-input' type='email' placeholder='Email' />
-                     <input onChange={onSubjectChange} className='form-block_subject form-input' type='text' placeholder='Subject' />
-                     <textarea onChange={onMessageChange} className='form-block_message form-input' type='text' placeholder='Message' />
+                     <input onChange={onEmailChange} style={isColor} className='form-block_email form-input' type='email' placeholder='Email' />
+                     <input onChange={onSubjectChange} style={isColor} className='form-block_subject form-input' type='text' placeholder='Subject' />
+                     <textarea onChange={onMessageChange} style={isColor} className='form-block_message form-input' type='text' placeholder='Message' />
                      <button
                         className='form-block_button'
                         onClick={onClickButton}

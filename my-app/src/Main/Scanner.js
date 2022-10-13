@@ -1,13 +1,16 @@
 import PhoneOne from '../img/phone_three.webp';
 import PhoneTwo from '../img/phone_four.webp';
-
+import Bg from '../img/backgroundSalt.webp';
 
 
 function Scanner() {
    return (
       <section className='page__scanner scanner'>
-         <div className='scanner__container'>
-            <div className='scanner__body _container'>
+         <div className='scanner__bg'>
+            <img src={Bg} alt='background' />
+         </div>
+         <div className='scanner__container _container'>
+            <div className='scanner__body'>
                <div className='scanner__scanner-phones'>
                   <img alt='phone' draggable="false" src={PhoneOne} className='scanner-phones_left' />
                   <img alt='phone' draggable="false" src={PhoneTwo} className='scanner-phones_right' />

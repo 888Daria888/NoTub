@@ -1,13 +1,16 @@
 import Phone from '../img/phone_seven.webp';
 import ElCircle from '../img/png/el6.png';
 import Arrow from '../img/png/arrow.svg';
-
+import Bg from '../img/background-text.webp';
 
 function Generate() {
    return (
       <section className='page__generate generate'>
-         <div className='generate__container'>
-            <div className='generate__body _container'>
+         <div className='generate__bg'>
+            <img src={Bg} alt='background' />
+         </div>
+         <div className='generate__container _container'>
+            <div className='generate__body'>
                <div className='generate__generate-phone'>
                   <img src={Phone} draggable="false" className='generate-phone_phone' alt='phone' />
                   <img src={ElCircle} draggable="false" className='generate-phone_circle' alt='circle' />
@@ -18,7 +21,7 @@ function Generate() {
                </div>
                <div className='generate__generate-text'>
                   <h2 className='generate-text_title _title'>Generate your QR-code</h2>
-                  <p className='generate-text_subtitle _subtitle'>The guest QR code is scanned
+                  <p className='generate-text_subtitle _subtitle'>The guest QR code is scanned <br/>
                      by the staff and automatically sent</p>
                </div>
             </div>

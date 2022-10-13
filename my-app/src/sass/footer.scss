@@ -1,5 +1,6 @@
 .footer {
- margin-top: 91px;
+   @include adaptiv-value("margin-top", 91, 10, 1);
+//  margin-top: 91px;
    &__wrapper {
    }
 
@@ -20,12 +21,16 @@
    &__footer-navigation {
       display: flex;
       justify-content: space-between;
-      margin-top: 150px;
+      @include adaptiv-value("margin-top", 150, 10, 1);
       font-family: 'Avenir';
       font-weight: 800;
-      font-size: 18px;
-      line-height: 25px;
-      margin-bottom: 85px;
+      @include adaptiv-value("font-size", 18, 16, 1);
+      @include adaptiv-value("line-height", 25, 16, 1);
+      @include adaptiv-value("margin-bottom", 85, 16, 1);
+      // margin-top: 150px;
+      // font-size: 18px;
+      // line-height: 25px;
+      // margin-bottom: 85px;
    }
 }
 
@@ -34,16 +39,20 @@
    &_title {
       font-family: 'Noto Sans';
       font-weight: 700;
-      font-size: 24px;
-      line-height: 33px;
+      @include adaptiv-value("font-size", 24, 16, 1);
+      @include adaptiv-value("line-height", 33, 16, 1);
+      // font-size: 24px;
+      // line-height: 33px;
       letter-spacing: 0.03em;
    }
 
    &__footer-link {
-      margin-top: 32px;
+      @include adaptiv-value("margin-top", 32, 10, 1);
+      // margin-top: 32px;
       display: flex;
       button:first-child{
-         margin-right: 27px;
+         @include adaptiv-value("margin-right", 27, 10, 1);
+         // margin-right: 27px;
       }
    }
 }
@@ -57,7 +66,8 @@
 
    &__footer-right {
       p:first-child{
-         margin-bottom: 25px;
+         @include adaptiv-value("margin-bottom", 25, 10, 1);
+         // margin-bottom: 25px;
       }
    }
 }
@@ -75,10 +85,12 @@
    }
 
    &_contact {
+      @include adaptiv-value("margin-top", 7, 5, 1);
+      @include adaptiv-value("width", 171, 290, 1);
+      // width: 171px;
+      // margin-top: 7px;
       position: relative;
-      margin-top: 7px;
       font-weight: 500;
-      width: 171px;
       z-index: 20;
    }
    &_contact-bold {
@@ -87,7 +99,8 @@
 
    &_copyright {
       position: relative;
-      margin-top: 25px;
+      @include adaptiv-value("margin-top", 25, 10, 1);
+      // margin-top: 25px;
       z-index: 21;
    }
 }
