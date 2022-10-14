@@ -95,8 +95,7 @@ body {
 	&__about-platform {
 	}
 	&__mission {
-		@include adaptiv-value("margin-top", 53, 15, 1);
-		// margin-top: 53px;
+		@include adaptiv-value("margin-top", 53, 70, 1);
 	}
 	&__scanner {
 		flex: 1 0 100%;
@@ -339,12 +338,13 @@ body {
 	&__mission-cards {
 		display: flex;
 		justify-content: space-between;
-//*задать вопрос. почему не совпадает с макетом
-		@include adaptiv-value("padding-left", 76, 33, 1);
-		@media (max-width: 1074+px) {
-			justify-content:start;
-			align-items: center;
+		padding-left: 56px;
+		@media (max-width:1248px){
+			padding-left: 0;
+		}
+		@media (max-width:1190px){
 			flex-direction: column;
+			align-items: center;
 		}
 	}
 
@@ -362,28 +362,36 @@ body {
 .mission-cards {
 
 	&__mission-contact {
-		@include adaptiv-value("width", 503, 345, 1);
-		@include adaptiv-value("height", 312, 233, 1);
+		width: 503px;
+		height: 312px;
 		@include adaptiv-value("padding-left", 55, 33, 1);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		border: 2px solid #FFFFFF80;
 		border-radius: 21px;
-		@media (max-width: 1074+px) {
+		@media (max-width: 1190px) {
 			margin-bottom: 30px;
+		}
+		@media (max-width:$md3+px){
+			width: 345px;
+			height: 233px;
 		}
 	}
 
 	&__mission-login {
-		@include adaptiv-value("width", 503, 345, 1);
-		@include adaptiv-value("height", 312, 167, 1);
+		width: 503px;
+		height: 312px;
 		@include adaptiv-value("padding-left", 55, 33, 1);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		border: 2px solid #FFFFFF80;
 		border-radius: 21px;
+		@media (max-width:$md3+px){
+			width: 345px;
+			height: 167px;
+		}
 	}
 }
 .mission-content {
@@ -467,9 +475,6 @@ body {
 		z-index: 8;
 	}
 
-	&_subtitle {
-		
-	}
 }
 
 //<Scanner>======================================================
