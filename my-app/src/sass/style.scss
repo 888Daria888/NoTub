@@ -92,8 +92,6 @@ body {
 		right: 0;
 		z-index: 100;
 	}
-	&__about-platform {
-	}
 	&__mission {
 		@include adaptiv-value("margin-top", 53, 70, 1);
 	}
@@ -104,7 +102,7 @@ body {
 			margin-top: 400px;
 		}
 		@media (max-width: $md4+px) {
-			margin-top: 190px;
+			margin-top: 390px;
 		}
 		
 	}
@@ -129,6 +127,11 @@ body {
 		position: relative;
 		@media (max-width:530px){
 			display: none;
+		}
+	}
+	&__form{
+		@media (max-width:530px){
+			margin-top: 125px;
 		}
 	}
 }
@@ -491,8 +494,9 @@ body {
 		background-size: cover;
 		background-position: center;
 		img{display: none;}
-		@media (max-width: $md4+px) {
-			background-size: contain;
+		@media (max-width: 376+px) {
+			background: no-repeat url('../img/backgroundSaltMini.webp');
+			top: -220px;
 		}
 	}
 	&__container {
@@ -515,9 +519,10 @@ body {
 		display: flex;
 		@media (max-width: 1280+px) {
 			padding-top:200px;
+			flex-direction: column;
+			align-self: center;
 		}
 		@media (max-width: $md4+px) {
-			flex-direction: column;
 			padding-top: 70px;
 		}
 	}
@@ -540,7 +545,7 @@ body {
 	&_left {
 		@include adaptiv-value("margin-right", 50, 10, 1);
 		// margin-right: 50px;
-		@media (max-width: $md4+px) {
+		@media (max-width: $md3+px) {
 			margin-right: 0px;
 			margin-bottom: 55px;
 		}
@@ -567,8 +572,6 @@ body {
 
 .intagration {
 
-	&__container {
-	}
 
 	&__body {
 		display: flex;
@@ -611,18 +614,15 @@ body {
 	}
 }
 
-.intagration-text {
+.intagration-text { 
 
 	&_title {
-		@include adaptiv-value("width", 496, 10, 1);
-		// width: 496px;
+		@include adaptiv-value("width", 496, 234, 1);
 	}
 
 	&_subtitle {
-		@include adaptiv-value("width", 395, 290, 1);
+		@include adaptiv-value("width", 395, 338, 1);
 		@include adaptiv-value("margin-top", 30, 10, 1);
-		// margin-top: 30px;
-		// width: 395px;
 	}
 }
 .intagration-chart {
@@ -929,6 +929,7 @@ body {
 		}
 		@media (max-width:$md4+px){
 			flex-direction: column;
+			margin-bottom: 70px;
 		}
 	}
 }
@@ -1014,7 +1015,7 @@ body {
 		z-index: 12;
 		align-self: center;
 		margin-top: 125px;
-		@include adaptiv-value("margin-top", 60, 10, 1);
+		@include adaptiv-value("margin-top", 60, 150, 1);
 		@media (max-width:900+px){
 			img{
 				width: 600px;
@@ -1176,10 +1177,10 @@ body {
 	&__form-block {
 		position: relative;
 		z-index: 17;
-		@include adaptiv-value("margin-top", 82, 10, 1);
+		@include adaptiv-value("margin-top", 82, 50, 1);
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		align-items: center;
 		form{
 			text-align: center;
 		}
@@ -1196,6 +1197,7 @@ body {
 	&_title {
 		position: relative;
 		z-index: 15;
+		margin-bottom: 24px;
 	}
 
 	&_subtitle {
@@ -1203,21 +1205,30 @@ body {
 		z-index: 16;
 	}
 	&_br{
+		@media (max-width:470px){
+			display: none;
+		}
 	}
 }
 .form-input{
-	@include adaptiv-value("width", 818, 290, 1);
-	// width: 818px;
+	width: 818px;
 	height: 83px;
 	background: #FFFFFF;
 	border: 1px solid #5C5C5C;
 	border-radius: 10px;
 	display: block;
-	@include adaptiv-value("padding-left", 23, 15, 1);
-	@include adaptiv-value("margin-bottom", 23, 10, 1);
-		// padding:0px 0px 0px 23px;
-	// margin-bottom: 23px;
-	
+	@include adaptiv-value("padding-left", 23, 11, 1);
+	@include adaptiv-value("margin-bottom", 23, 16, 1);
+	@media (max-width:928px){
+		width: 650px;
+	}
+	@media (max-width:$md3+px){
+		width: 430px;
+		height: 57px;
+	}
+	@media (max-width:$md4+px){
+		width: 345px;
+	}
 }
 .form-input::placeholder{
 	color: #BFBFBF;
@@ -1227,17 +1238,23 @@ body {
 }
 .form-input-mini{
 	display: block;
-	@include adaptiv-value("min-width", 397, 290, 1);
-	@include adaptiv-value("height", 83, 10, 1);
-	@include adaptiv-value("margin-bottom", 23, 10, 1);
+	@include adaptiv-value("margin-bottom", 23, 16, 1);
 	@include adaptiv-value("padding-left", 23, 15, 1);
-	// width: 397px;
-	// height: 83px;
-	// margin-bottom: 23px;
-	// padding:0px 0px 0px 23px;
+	width: 397px;
+	height: 83px;
 	background: #FFFFFF;
 	border: 1px solid #5C5C5C;
 	border-radius: 10px;
+	@media (max-width:928px){
+		width: 317px;
+	}
+	@media (max-width:$md3+px){
+		width: 207px;
+		height: 57px;
+	}
+	@media (max-width:$md4+px){
+		width: 345px;
+	}
 }
 .form-block {
 	&_circle{
@@ -1249,54 +1266,47 @@ body {
 	&__block{
 		display: flex;
 		justify-content: space-between;
+		@media (max-width:$md4+px){
+			flex-direction: column;
+		}
 	}
 
-	&_name {
-		
-	}
-
-	&_venue-name {
-		
-	}
-
-	&_email {
-		
-	}
-
-	&_subject {
-		
+	&_venue-city {
+		margin-right: 24px;
+		@media (max-width:928px){
+			margin-right: 15px;
+		}
+		@media (max-width:$md4+px){
+			margin-right: 0px;
+		}
 	}
 
 	&_message {
 		resize: none;
-		@include adaptiv-value("height", 199, 290, 1);
 		@include adaptiv-value("padding-top",26, 15, 1);
 		@include adaptiv-value("padding-bottom", 26, 15, 1);
 		@include adaptiv-value("padding-right", 23, 15, 1);
 		@include adaptiv-value("padding-left", 23, 15, 1);
-		// padding:26px 23px;
-		// height: 199px;
+		height: 199px;
+		@media (max-width:$md4+px){
+			height: 140px;
+		}
 	}
 	&_button{
+		align-self: center;
 		@include adaptiv-value("margin-top", 60, 10, 1);
-		// margin-top: 60px;
 		color: #fff;
-		@include adaptiv-value("width", 398, 290, 1);
-		@include adaptiv-value("height", 80, 20, 1);
-		// width: 398px;
-		// height: 80px;
+		width: 398px;
+		height: 80px;
 		background: #000000;
 		border: 1px solid #FFFFFF;
 		border-radius: 10px;
 		position: relative;
 		z-index: 22;
-	}
-}
-.block{
-	&_venue-city {
-	}
-
-	&_state-city {
+		@media (max-width:$md4+px){
+			width: 345px;
+			height: 80px;
+		}
 	}
 }
 

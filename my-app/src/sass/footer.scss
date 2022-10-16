@@ -1,11 +1,5 @@
 .footer {
-   @include adaptiv-value("margin-top", 91, 10, 1);
-//  margin-top: 91px;
-   &__wrapper {
-   }
-
-   &__container {
-   }
+   @include adaptiv-value("margin-top", 91, 74, 1);
 
    &__body {
       display: flex;
@@ -21,16 +15,16 @@
    &__footer-navigation {
       display: flex;
       justify-content: space-between;
-      @include adaptiv-value("margin-top", 150, 10, 1);
+      @include adaptiv-value("margin-top", 150, 45, 1);
       font-family: 'Avenir';
       font-weight: 800;
-      @include adaptiv-value("font-size", 18, 16, 1);
-      @include adaptiv-value("line-height", 25, 16, 1);
-      @include adaptiv-value("margin-bottom", 85, 16, 1);
-      // margin-top: 150px;
-      // font-size: 18px;
-      // line-height: 25px;
-      // margin-bottom: 85px;
+      @include adaptiv-value("margin-bottom", 85, 24, 1);
+      font-size: 18px;
+      line-height: 25px;
+      @media (max-width:$md4+px){
+         flex-direction: column-reverse;
+         align-items: center;
+      }
    }
 }
 
@@ -39,20 +33,26 @@
    &_title {
       font-family: 'Noto Sans';
       font-weight: 700;
-      @include adaptiv-value("font-size", 24, 16, 1);
-      @include adaptiv-value("line-height", 33, 16, 1);
-      // font-size: 24px;
-      // line-height: 33px;
+      @include adaptiv-value("line-height", 33, 32, 1);
+      font-size: 24px;
       letter-spacing: 0.03em;
    }
 
    &__footer-link {
-      @include adaptiv-value("margin-top", 32, 10, 1);
-      // margin-top: 32px;
+      @include adaptiv-value("margin-top", 32, 45, 1);
       display: flex;
       button:first-child{
-         @include adaptiv-value("margin-right", 27, 10, 1);
-         // margin-right: 27px;
+         margin-right: 27px;
+      }
+      @media (max-width:$md4+px){
+         flex-direction: column;
+         button:first-child{
+            margin-right: 0;
+            margin-bottom: 24px;
+            img{
+               width: 185px;
+            }
+         }
       }
    }
 }
@@ -62,12 +62,20 @@
    &__footer-left {
       position: relative;
       z-index: 18;
+      @media (max-width:$md4+px){
+         font-size: 14px;
+         line-height: 19px;
+         text-align: center;
+      }
    }
 
    &__footer-right {
       p:first-child{
-         @include adaptiv-value("margin-bottom", 25, 10, 1);
-         // margin-bottom: 25px;
+         @include adaptiv-value("margin-bottom", 25, 14, 1);
+      }
+      @media (max-width:$md4+px){
+         text-align: center;
+         margin-bottom: 58px;
       }
    }
 }
@@ -85,10 +93,8 @@
    }
 
    &_contact {
-      @include adaptiv-value("margin-top", 7, 5, 1);
-      @include adaptiv-value("width", 171, 290, 1);
-      // width: 171px;
-      // margin-top: 7px;
+      @include adaptiv-value("margin-top", 7, 15, 1);
+      @include adaptiv-value("width", 171, 220, 1);
       position: relative;
       font-weight: 500;
       z-index: 20;
@@ -100,7 +106,6 @@
    &_copyright {
       position: relative;
       @include adaptiv-value("margin-top", 25, 10, 1);
-      // margin-top: 25px;
       z-index: 21;
    }
 }

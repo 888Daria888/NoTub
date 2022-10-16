@@ -11,13 +11,6 @@ function Form() {
    const [subject, setSubject] = useState('');
    const [message, setMessage] = useState('');
    const [isColor, setIsColor] = useState({});
-   // let isColor = new Object();
-   // Object.defineProperties(isColor, {
-   //    border: {
-   //       value: 'none',
-   //       writable: true,
-   //    },
-   // });
    const onSubmit = (e) => {
       e.preventDefault();
    }
@@ -47,7 +40,7 @@ function Form() {
 
    const onClickButton = () => {
       if ((names || venueName || venueCity || stateCity || emails || subject || message) == '') {
-         setIsColor({border: '2px solid #FF0000'});
+         setIsColor({ border: '2px solid #FF0000' });
       }
 
    }
@@ -60,25 +53,23 @@ function Form() {
                   <h2 className='form-text_title _title'>Get In Touch</h2>
                   <p className='form-text_subtitle _subtitle'>Have questions about Noble or just want to say hello? <br className='form-text_br' /> Drop us a line and a member of our team will getback to you shortly.</p>
                </div>
-               <div className='form__form-block'>
-                  <form onSubmit={onSubmit}>
-                     <input onChange={onNameChange} style={isColor} className='form-block_name form-input' type='text' placeholder='Name' />
-                     <input onChange={onVenueNameChange} style={isColor} className='form-block_venue-name form-input' type='text' placeholder='Venue Name' />
-                     <div className='form-block__block'>
-                        <input onChange={onVenueCityChange} style={isColor} className='form-block_venue-city form-input-mini' type='text' placeholder='Venue City' />
-                        <input onChange={onStateCityChange} style={isColor} className='form-block_state-city form-input-mini' type='text' placeholder='State City' />
-                     </div>
-                     <input onChange={onEmailChange} style={isColor} className='form-block_email form-input' type='email' placeholder='Email' />
-                     <input onChange={onSubjectChange} style={isColor} className='form-block_subject form-input' type='text' placeholder='Subject' />
-                     <textarea onChange={onMessageChange} style={isColor} className='form-block_message form-input' type='text' placeholder='Message' />
-                     <button
-                        className='form-block_button'
-                        onClick={onClickButton}
-                        // disabled={!names || !venueName || !venueCity || !stateCity || !emails || !subject || !message}
-                        type="submit">Send</button>
-                     <img src={ElCircleBig} draggable="false" alt='circle' className='form-block_circle' />
-                  </form>
-               </div>
+               <form className='form__form-block' onSubmit={onSubmit}>
+                  <input onChange={onNameChange} style={isColor} className='form-block_name form-input' type='text' placeholder='Name' />
+                  <input onChange={onVenueNameChange} style={isColor} className='form-block_venue-name form-input' type='text' placeholder='Venue Name' />
+                  <div className='form-block__block'>
+                     <input onChange={onVenueCityChange} style={isColor} className='form-block_venue-city form-input-mini' type='text' placeholder='Venue City' />
+                     <input onChange={onStateCityChange} style={isColor} className='form-block_state-city form-input-mini' type='text' placeholder='State City' />
+                  </div>
+                  <input onChange={onEmailChange} style={isColor} className='form-block_email form-input' type='email' placeholder='Email' />
+                  <input onChange={onSubjectChange} style={isColor} className='form-block_subject form-input' type='text' placeholder='Subject' />
+                  <textarea onChange={onMessageChange} style={isColor} className='form-block_message form-input' type='text' placeholder='Message' />
+                  <button
+                     className='form-block_button'
+                     onClick={onClickButton}
+                     // disabled={!names || !venueName || !venueCity || !stateCity || !emails || !subject || !message}
+                     type="submit">Send</button>
+                  <img src={ElCircleBig} draggable="false" alt='circle' className='form-block_circle' />
+               </form>
             </div>
          </div>
       </section>
