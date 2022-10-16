@@ -12,11 +12,11 @@ function QRCode() {
          <div className='qrcode__bg'>
             <img src={Bg} alt='background' />
          </div>
-         <div className='qrcode__container _container'>
+         <div className='qrcode_container container'>
             <div className='qrcode__body'>
                <div className='qrcode__qrcode-text'>
-                  <h2 className='qrcode-text_title _title'>QR code</h2>
-                  <p className='qrcode-text_subtitle _subtitle'>No more conflict situations due to wrong order. The guest selects the positions, and after that an individual QR code of his order is generated</p>
+                  <h2 className='qrcode-text_title title'>QR code</h2>
+                  <p className='qrcode-text_subtitle subtitle'>No more conflict situations due to wrong order. The guest selects the positions, and after that an individual QR code of his order is generated</p>
                   <div className='qrcode-text__qrcode-store'>
                      <button>
                         <img className='qrcode-store_app' draggable="false" src={AppStore} alt='App Store' />

@@ -9,7 +9,7 @@ import GooglePlay from '../img/buttonGooglePlay.webp';
 function AboutPlatforma() {
    return (
       <section className='page__about-platform about-platform'>
-         <div className='about-platform__container _container'>
+         <div className='about-platform_container container'>
             <div className='about-platform__body'>
                <div className='about-platform__content'>
                   <div className='about-platform__information'>

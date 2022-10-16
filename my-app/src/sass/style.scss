@@ -53,19 +53,19 @@ body {
 //</ОБОЛОЧКА>===========================================================================================================
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
-._container {
+.container {
 	max-width: $maxWidthContainer + px;
 	@include adaptiv-value("padding-right", 81, 18, 1);
 	@include adaptiv-value("padding-left", 100, 18, 1);
 	margin: 0 auto;
 }
-._title{
+.title{
 	font-family: 'Montserrat';
 	font-weight: 700;
 	@include adaptiv-value("line-height", 62, 29, 1);
 	@include adaptiv-value("font-size", 51, 24, 1);
 }
-._subtitle{
+.subtitle{
 	@include adaptiv-value("line-height", 25, 21, 1);
 	@include adaptiv-value("font-size", 18, 16, 1);
 }
@@ -138,7 +138,7 @@ body {
 //Cookie=======================================================================================
 
 .cookie {
-	&__container{
+	&_container{
 		height: 93px;
 		align-items: center;
 		display: flex;
@@ -499,7 +499,7 @@ body {
 			top: -220px;
 		}
 	}
-	&__container {
+	&_container {
 	position: relative;
 	}
 
@@ -544,14 +544,10 @@ body {
 
 	&_left {
 		@include adaptiv-value("margin-right", 50, 10, 1);
-		// margin-right: 50px;
 		@media (max-width: $md3+px) {
 			margin-right: 0px;
 			margin-bottom: 55px;
 		}
-	}
-
-	&_right {
 	}
 }
 

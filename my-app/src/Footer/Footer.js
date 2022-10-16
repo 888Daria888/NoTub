@@ -8,7 +8,7 @@ function Footer() {
    return (
       <footer className="footer">
          <div className='footer__wrapper'>
-            <div className='footer__container _container'>
+            <div className='footer_container container'>
                <div className='footer__body'>
                   <div className='footer__footer-download'>
                      <h3 className='footer-download_title'>DOWNLOAD OUR APP</h3>

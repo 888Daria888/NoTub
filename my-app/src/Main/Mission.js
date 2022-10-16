@@ -3,10 +3,10 @@ import CircleLightBig from '../img/png/el4.png';
 import CircleLightMini from '../img/png/el5.png';
 
 function Mission() {
-   
+
    return (
       <section className='page__mission mission'>
-         <div className='mission__container _container'>
+         <div className='mission_container container'>
             <div className='mission__body'>
                <div className='mission__mission-cards mission-cards'>
                   <div className='mission-cards__mission-contact'>
@@ -29,8 +29,8 @@ function Mission() {
                   <div>
                      <div className='mission-content__mission-text'>
                         <img className='mission-text_light' draggable="false" alt='light' src={CircleLightMini} />
-                        <h2 className='mission-text_title _title'>Our mission and vision</h2>
-                        <p className='mission-text_subtitle _subtitle'>While technology is our sweet spot, we’ve developed our vision alongside
+                        <h2 className='mission-text_title title'>Our mission and vision</h2>
+                        <p className='mission-text_subtitle subtitle'>While technology is our sweet spot, we’ve developed our vision alongside
                            our customers to ensure your everyday problems are solved through simplistic tools. And as your business grows, we’ll grow right alongside with you. </p>
                      </div>
                   </div>

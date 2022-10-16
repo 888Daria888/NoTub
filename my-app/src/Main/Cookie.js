@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState } from 'react';
 
 
 function Cookie() {
@@ -8,8 +8,8 @@ function Cookie() {
    }
 
    return (
-      <section style={{display: isDisplay}} className='page__cookie cookie'>
-         <div className='cookie__container _container'>
+      <section style={{ display: isDisplay }} className='page__cookie cookie'>
+         <div className='cookie_container container'>
             <div className="cookie__text">We use cookie to improve your experience on our site. By using our site you consent cookies.</div>
             <button className="cookie__apply" onClick={onClickCookie} type="button">OK</button>
          </div>

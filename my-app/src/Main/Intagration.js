@@ -9,11 +9,11 @@ import TrackSeven from '../img/chart-precent.webp';
 function Intagration() {
    return (
       <section className='page__intagration intagration'>
-         <div className='intagration__container _container'>
+         <div className='intagration_container container'>
             <div className='intagration__body'>
                <div className='intagration__intagration-text'>
-                  <h2 className='intagration-text_title _title'>BI Tool Integration</h2>
-                  <p className='intagration-text_subtitle _subtitle'>We use Business Intelligence Tool that allows you to be updated what is happening in your business just by one click. Track revenue
+                  <h2 className='intagration-text_title title'>BI Tool Integration</h2>
+                  <p className='intagration-text_subtitle subtitle'>We use Business Intelligence Tool that allows you to be updated what is happening in your business just by one click. Track revenue
                      and profit by one click.</p>
                </div>
                <div className='intagration__intagration-chart'>

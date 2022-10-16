@@ -9,7 +9,7 @@ function Generate() {
          <div className='generate__bg'>
             <img src={Bg} alt='background' />
          </div>
-         <div className='generate__container _container'>
+         <div className='generate_container container'>
             <div className='generate__body'>
                <div className='generate__generate-phone'>
                   <img src={Phone} draggable="false" className='generate-phone_phone' alt='phone' />
@@ -20,8 +20,8 @@ function Generate() {
                   </div>
                </div>
                <div className='generate__generate-text'>
-                  <h2 className='generate-text_title _title'>Generate your QR-code</h2>
-                  <p className='generate-text_subtitle _subtitle'>The guest QR code is scanned <br/>
+                  <h2 className='generate-text_title title'>Generate your QR-code</h2>
+                  <p className='generate-text_subtitle subtitle'>The guest QR code is scanned <br />
                      by the staff and automatically sent</p>
                </div>
             </div>
